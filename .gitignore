@@ -1,0 +1,65 @@
+# -------------------------
+# Python cache & compiled
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# -------------------------
+# Virtual environments
+# -------------------------
+venv/
+env/
+.venv/
+ENV/
+my_env/
+
+# -------------------------
+# Environment variables
+# -------------------------
+.env
+.env.*
+
+# -------------------------
+# Dataset / data files
+# -------------------------
+dataset/
+data/
+*.csv
+*.tsv
+*.xlsx
+
+# -------------------------
+# Jupyter Notebook
+# -------------------------
+.ipynb_checkpoints/
+
+# -------------------------
+# Logs & temp files
+# -------------------------
+*.log
+*.tmp
+
+# -------------------------
+# IDE / Editor configs
+# -------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -------------------------
+# OS-specific files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+
+#Ignoring Index folder 
+index/
+app/chatbot_1_ver.py
+app/run.py
+
+
+ui/
