@@ -1,7 +1,7 @@
 # Book Recommendation Chatbot Using RAG (LangChain + Ollama)
 
 It is a minimal **terminal-based AI chatbot** built using **LangChain** and **Ollama**.  
-It runs locally using the `llama3` model and keeps basic conversation context during a session.
+It runs locally using the `llama3.2:1b` model and keeps basic conversation context during a session.
 
 Clean, simple, and easy to extend.
 
