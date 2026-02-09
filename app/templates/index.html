@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ollama AI Chat</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+
+
+<div class="w-full max-w-3xl bg-white shadow-lg rounded-lg flex flex-col">
+
+
+<div class="bg-gray-900 text-white p-4 rounded-t-lg">
+<h1 class="text-xl font-semibold">Book Suggestion Using RAG</h1>
+</div>
+
+
+<div id="chat-box" class="flex-1 p-4 overflow-y-auto space-y-3"></div>
+
+
+<form id="chat-form" class="flex border-t">
+<input
+id="message"
+class="flex-1 p-3 outline-none"
+placeholder="Ask something..."
+autocomplete="off"
+/>
+<button class="bg-gray-900 text-white px-6">Send</button>
+</form>
+</div>
+
+
+<script>
+const form = document.getElementById("chat-form");
+const chatBox = document.getElementById("chat-box");
+
+
+form.addEventListener("submit", async (e) => {
+e.preventDefault();
+
+
+const input = document.getElementById("message");
+const message = input.value;
+
+
+chatBox.innerHTML += `<div class="text-right"><p class="bg-blue-200 p-2 rounded">${message}</p></div>`;
+input.value = "";
+
+
+const res = await fetch("/", {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify({ message })
+});
+
+
+const data = await res.json();
+
+
+chatBox.innerHTML += `<div class="text-left"><p class="bg-gray-200 p-2 rounded">${data.reply}</p></div>`;
+chatBox.scrollTop = chatBox.scrollHeight;
+});
+</script>
+
+
+</body>
+</html>

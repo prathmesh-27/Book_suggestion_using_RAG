@@ -30,5 +30,12 @@ def handle_convo():
         context = f"\nUser: {user_input}\nAI: {result}"
 
 
+def ask_ollama(context, question):
+    return chain.invoke({
+        "context": context,
+        "question": question
+    })
+
+
 if __name__ == "__main__":
     handle_convo()

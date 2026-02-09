@@ -24,7 +24,7 @@ The dataset used in this project is the **CMU Book Summary Dataset**, which prov
 ## 🛠 Requirements
 - Python **3.10+**
 - **Ollama** installed
-- Ollama model: `llama3`
+- Ollama model: `llama3.2:1b` # I used this due to my machine limitation
 
 Python dependencies:
 
@@ -41,10 +41,10 @@ Clone the repository:
 git clone https://github.com/prathmesh-27/Book_suggestion_using_RAG
 cd Book_suggestion_using_RAG
 ```
-Pull the `llama3` model
+Pull the `llama3.2:1b` model
 
 ```bash
-ollama pull llama3
+ollama pull llama3.2:1b.
 ```
 
 ---
@@ -62,12 +62,12 @@ python build_index.py
 ```
 
 ```bash 
-python app/chatbot.py
+python run.py
 ```
 ---
 
-## Future Scope
+<!-- ## Future Scope
 
 - Persistent memory
 - Web or API interface
-- Streaming responses
+- Streaming responses -->
